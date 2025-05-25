@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            width: 90%;
+            margin: auto;
+        }
+        th {
+            background-color: #cce0f5;
+        }
+        td, th {
+            padding: 8px;
+            text-align: center;
+        }
+        .highlight {
+            background-color: #ffe599;
+            font-weight: bold;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="6">INVENTORY SYSTEMS</th>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Supplier</th>
+                <th>Date</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10001</td>
+                <td>Buldak Carbonara (pack)</td>
+                <td class="red">150</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>25/05/2025</td>
+                <td rowspan="8">
+                    <img src="https://poppin-candy.com/cdn/shop/files/PHOTOROOM1080X1080TRANSPARENT-PhotoRoom_51.png?v=1703169669" alt="Buldak Ramen Image" width="350">
+                </td>
+            </tr>
+            <tr>
+                <td>10002</td>
+                <td>Buldak Quattro Cheese (pack)</td>
+                <td>278</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>30/05/2025</td>
+            </tr>
+            <tr>
+                <td>10003</td>
+                <td>Buldak 2x Spicy (pack)</td>
+                <td>1000</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>29/05/2025</td>
+            </tr>
+            <tr>
+                <td>10004</td>
+                <td>Buldak Cheese (pack)</td>
+                <td>500</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>26/05/2025</td>
+            </tr>
+            <tr>
+                <td>10005</td>
+                <td>Buldak Rose (pc)</td>
+                <td>500</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>22/05/2025</td>
+            </tr>
+            <tr>
+                <td>10006</td>
+                <td>Buldak Carbonara (pc)</td>
+                <td>2500</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>21/05/2025</td>
+            </tr>
+            <tr>
+                <td>10007</td>
+                <td>Buldak Quattro Cheese (pc)</td>
+                <td>1000</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>28/05/2025</td>
+            </tr>
+            <tr>
+                <td>10008</td>
+                <td>Buldak 2x Spicy (pc)</td>
+                <td>390</td>
+                <td class="highlight">Samyang Foods Co., Ltd</td>
+                <td>22/05/2025</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

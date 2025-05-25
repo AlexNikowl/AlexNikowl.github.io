@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 40%;
+            margin: auto;
+            padding: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 70px;
+        }
+        .required {
+            color: red;
+            font-size: 0.9em;
+        }
+        .submit-btn {
+            background-color: #d3d3d3;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #bdbdbd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Contact Form</h2>
+    <form action="#" method="post">
+        <ul>
+            <li>
+                <label for="name">Your Name*:</label><br>
+                <input type="text" id="name" name="name" required>
+            </li>
+            <li>
+                <label for="email">Email*:</label><br>
+                <input type="email" id="email" name="email" required>
+            </li>
+            <li>
+                <label for="contact">Contact No.*:</label><br>
+                <input type="text" id="contact" name="contact" required>
+            </li>
+            <li>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea>
+            </li>
+            <li class="required">* required field</li>
+            <li>
+                <button type="submit" class="submit-btn">Send</button>
+            </li>
+        </ul>
+    </form>
+</div>
+
+</body>
+</html>

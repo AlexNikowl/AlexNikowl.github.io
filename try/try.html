@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go Webstore</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Pokemon Go Webstore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="homepage">
+            <h2>Discover the World of Pokemon</h2>
+            <p>Your adventure begins here! Explore our exclusive merchandise and join the Pokemon community.</p>
+        </section>
+
+        <section id="login">
+            <h2>Log In</h2>
+            <form action="dashboard.html" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Log In</button>
+            </form>
+        </section>
+
+        <section id="register">
+            <h2>Register</h2>
+            <form action="welcome.html" method="post">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="middle-name">Middle Name:</label>
+                <input type="text" id="middle-name" name="middle-name">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <label for="account-code">Pokemon Go Account Code:</label>
+                <input type="text" id="account-code" name="account-code" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to bringing the best Pokemon merchandise to fans around the world.</p>
+            <div class="team">
+                <h3>Our Team</h3>
+                <img src="team.jpg" alt="Team Photo">
+                <p>Meet our passionate team of Pokemon enthusiasts!</p>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <h3>Pokemon T-Shirt</h3>
+                <p>High-quality cotton t-shirt featuring your favorite Pokemon.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Pokemon Plush Toy</h3>
+                <p>Soft and cuddly plush toys of your favorite characters.</p>
+                <button>Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pokemon Go Webstore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

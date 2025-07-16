@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Heading Preview</title>
+  <style>
+    @font-face {
+      font-family: 'PokemonFont';
+      src: url('fonts/PokemonSolid.ttf') format('truetype');
+    }
+
+    body {
+      background: linear-gradient(to bottom, #eaf4ff, #c6ddff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .pokemon-heading {
+      font-family: 'PokemonFont', sans-serif;
+      font-size: 64px;
+      color: #FFCB05; /* Pokémon Yellow */
+      text-shadow:
+        -2px -2px 0 #3B4CCA,
+        2px -2px 0 #3B4CCA,
+        -2px 2px 0 #3B4CCA,
+        2px 2px 0 #3B4CCA;
+      text-align: center;
+      line-height: 1.2;
+      animation: popIn 0.8s ease-out forwards;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="pokemon-heading">Web Store <br>for Pokémon GO</h1>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Saja Babies Webstore</title>
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="register.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous"/>
+</head>
+
+<body>
+  <div class="center-form">
+    <div class="form">
+      <div class="logo">
+        <img src="../images/logo.PNG" width="85" height="85" alt="Logo">
+      </div>
+      <h3 class="signin">Sign Up</h3>
+      <form onsubmit="return passwordvalidation()">
+        
+        <div class="row mb-2">
+          <div class="col-md-4"><input type="text" name="last_name" class="form-control" placeholder="Last Name*" required /></div>
+          <div class="col-md-4"><input type="text" name="first_name" class="form-control" placeholder="First Name*" required /></div>
+          <div class="col-md-4"><input type="text" name="middle_name" class="form-control" placeholder="Middle Name*" required /></div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6"><label class="mt-2">Sex</label><select name="sex" class="form-control" required>
+            <option value="">-</option><option value="male">Male</option><option value="female">Female</option>
+          </select></div>
+          <div class="col-md-6"><label class="mt-2">Birth Date</label><input type="date" name="dob" class="form-control" required /></div>
+        </div>
+        <div class="mb-1"><label>Email Address</label><input type="email" name="email" class="form-control" required /></div>
+        <div class="row mb-3">
+          <div class="col-md-6"><label>Password</label><input type="password" id="password" class="form-control" required /></div>
+          <div class="col-md-6"><label>Confirm Password</label><input type="password" id="confirm_password" class="form-control" required /></div>
+        </div>
+        <div class="mb-3"><label>Pokémon GO Account Code</label><input type="text" name="code" class="form-control" placeholder="Code" required /></div>
+        <div class="button"><button type="submit" class="button-control"><i class="fa-solid fa-user"></i> SIGN UP</button></div>
+      </form>
+      <h6 class="option">- or -</h6>
+      <button class="signin-btn apple"><img src="../images/apple.png" width="20" height="20" alt="Apple"> Sign up with Apple</button>
+      <button class="signin-btn facebook"><img src="../images/facebook.png" width="20" height="20" alt="Facebook"> Sign up with Facebook</button>
+      <button class="signin-btn google"><img src="../images/google.png" width="20" height="20" alt="Google"> Sign up with Google</button>
+    </div>
+  </div>
+
+<p style="text-align:center; margin-top: 8px;">
+  Already have an account? <a href="Saja Babies.html">Go back home</a>
+</p>
+
+
+  <script>
+    function passwordvalidation() {
+      const pw = document.getElementById("password").value;
+      const cpw = document.getElementById("confirm_password").value;
+      if (pw === cpw) return true;
+      alert("Passwords Do Not Match");
+      return false;
+    }
+  </script>
+</body>
+</html>

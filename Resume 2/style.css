@@ -1,0 +1,44 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+  color: #333;
+}
+
+.resume-container {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-box {
+  background-color: #d4c2f1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-box h3 {
+  color: #e66363;
+}
+
+.profile-box a {
+  color: #0072ff;
+  text-decoration: none;
+}
+
+.profile-box a:hover {
+  text-decoration: underline;
+}
+
+h4 {
+  margin-top: 20px;
+  color: #009688;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+hr {
+  border-top: 1px solid #aaa;
+}

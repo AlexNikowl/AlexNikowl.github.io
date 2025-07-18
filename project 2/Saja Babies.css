@@ -56,7 +56,11 @@ button, .content small {
 .logo{
     width: 250px;
     cursor: pointer;
+    position: relative;
+    left: -40px;
+    top: 35px;
 }
+
 
 
 @media (max-width: 768px) {
@@ -151,7 +155,7 @@ h1{
 .side-bar{
     width: 50px;
     height: 100vh;
-    background: linear-gradient(#00545d, #000729);
+    background: linear-gradient(#838BB3, #000729);
     position: absolute;
     right: 0;
     top: 0;
@@ -289,7 +293,7 @@ cursor: pointer auto;
 }
 
 
-/* 📱 Mobile & Small Screens */
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -372,7 +376,7 @@ cursor: pointer auto;
   max-width: 420px;
   background: #ffffff;
   color: #333;
-  border: 2px solid #3B4CCA;
+  border: 2px solid #b38bb3;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);

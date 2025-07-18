@@ -6,23 +6,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html {
-  overflow-x: hidden; 
+html, body {
+    margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
+
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   letter-spacing: 2px;
   text-transform: uppercase;
-  overflow-y: auto;
 }
-
-
-
-
 
 button, .content small {
   text-transform: none;
@@ -45,8 +41,7 @@ button, .content small {
 
 .hero {
   width: 100%;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(images/background2.jpeg);
   background-size: cover;
   background-position: center;
@@ -74,15 +69,6 @@ button, .content small {
   }
 }
 
-.navbar {
-  width: 100%;
-  padding: 0 20px;
-}
-.auth-buttons {
-  justify-content: center;
-}
-
-
 .navbar{
     width: 85%;
     height: 15%;
@@ -97,23 +83,6 @@ button, .content small {
   align-items: center;
   gap: 8px;
   z-index: 3; 
-}
-
-@media (max-width: 768px) {
-  .auth-buttons {
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 10px;
-    gap: 10px;
-  }
-
-  .auth-buttons a button {
-    width: 100%;
-    max-width: 180px;
-    font-size: 14px;
-    padding: 10px;
-  }
 }
 
 
@@ -325,6 +294,44 @@ cursor: pointer auto;
 
 
 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hero h1,
+  .pokemon-heading {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .content {
+    top: 30%;
+    left: 10%;
+    transform: translateY(-30%);
+    text-align: left;
+  }
+
+  .side-bar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+  }
+
   .social-links,
   .useful-links {
     position: static;
@@ -347,7 +354,7 @@ cursor: pointer auto;
   }
 
   .promo-tab {
-    bottom: 120px; 
+    bottom: 120px; /* so it doesn't cover fixed nav */
     right: -100%;
     min-width: 240px;
     font-size: 12px;
@@ -359,50 +366,6 @@ cursor: pointer auto;
   }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 20px;
-    gap: 10px;
-    height: auto;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 1000;
-  }
-
-  .logo {
-    width: 150px;
-    margin-bottom: 10px;
-    position: static;
-    left: auto;
-    top: auto;
-  }
-
-  .auth-buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .login-btn,
-  .register-btn {
-    width: 100%;
-    font-size: 14px;
-    padding: 10px 0;
-  }
-
-  .hero {
-    padding-top: 20px;
-  }
-
-  .content {
-    margin-top: 20px;
-  }
-}
 
 
 .cookie-popup {
@@ -482,139 +445,6 @@ cursor: pointer auto;
   border: none;
   color: #000;
   z-index: 2;
-}
-
-.items, .item1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-
-@media (max-width: 1024px) {
-
-  
-  .top-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 15px;
-  }
-  .top-nav .logo {
-    position: static;
-    margin-bottom: 10px;
-    width: 100px;
-  }
-  .top-nav .menu {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  
-  .main-content {
-    width: 100%;
-    max-width: 100%;
-    padding: 40px 15px;
-  }
-  .main-content h1 {
-    font-size: 1.8em;
-  }
-  .main-content p {
-    font-size: 16px;
-  }
-
-  
-  .custom-btn1, .custom-btn2, .sign {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  
-  .box img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .main-content h1 {
-    font-size: 1.4em;
-  }
-  .main-content p {
-    font-size: 14px;
-  }
-
-  
-  .center-form, .form {
-    padding: 20px;
-  }
-  .form {
-    max-width: 90%;
-  }
-
-  
-  .row, .row1 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  
-  .top-nav .menu {
-    justify-content: center;
-  }
-}
-
-
-
-.stay, .video-banner, .main-content,
-.center-form, .form {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-
-
-
-@media (max-width: 768px) {
-  
-  .promo-tab {
-    bottom: 60px; 
-    right: 10px;
-    min-width: calc(100% - 20px);
-    max-width: 350px;
-    font-size: 14px;
-    padding: 10px 16px;
-  }
-
- 
-  .bubbles {
-    bottom: -40px;
-    flex-wrap: wrap;
-    padding-bottom: 40px;
-  }
-  .bubbles img {
-    width: 30px;
-    margin: 4px;
-  }
-
-  
-  .hero {
-    padding-top: 20px;
-  }
-  .content {
-    margin-top: 20px;
-  }
-
- 
-  .navbar {
-    position: relative;
-    background: rgba(255,255,255,0.9);
-  }
 }
 
 

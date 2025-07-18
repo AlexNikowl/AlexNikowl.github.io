@@ -6,11 +6,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-    margin: 0;
-  padding: 0;
-  overflow: hidden;
+html {
+  overflow-x: hidden; 
 }
+
+body {
+  overflow-y: auto;   
+}
+
 
 
 body {
@@ -41,7 +44,8 @@ button, .content small {
 
 .hero {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   background-image: url(images/background2.jpeg);
   background-size: cover;
   background-position: center;
@@ -69,6 +73,15 @@ button, .content small {
   }
 }
 
+.navbar {
+  width: 100%;
+  padding: 0 20px;
+}
+.auth-buttons {
+  justify-content: center;
+}
+
+
 .navbar{
     width: 85%;
     height: 15%;
@@ -83,6 +96,23 @@ button, .content small {
   align-items: center;
   gap: 8px;
   z-index: 3; 
+}
+
+@media (max-width: 768px) {
+  .auth-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .auth-buttons a button {
+    width: 100%;
+    max-width: 180px;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 
@@ -296,6 +326,61 @@ cursor: pointer auto;
 
 @media (max-width: 768px) {
   .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 160px;
+    top: 0;
+    left: 0;
+    position: static;
+  }
+
+  .auth-buttons {
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+
+  .content {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    padding: 20px;
+    text-align: left;
+  }
+
+  small {
+    font-size: 22px;
+  }
+
+  .pokemon-heading {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .side-bar {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -447,21 +532,37 @@ cursor: pointer auto;
   z-index: 2;
 }
 
-
-.stay, .video-banner, .main-content,
-.center-form, .form {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+.items, .item1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
+
 @media (max-width: 1024px) {
-  .video-banner {
+
+  
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
     height: auto;
+    padding: 15px;
   }
+  .top-nav .logo {
+    position: static;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+  .top-nav .menu {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  
   .main-content {
     width: 100%;
+    max-width: 100%;
     padding: 40px 15px;
   }
   .main-content h1 {
@@ -470,29 +571,61 @@ cursor: pointer auto;
   .main-content p {
     font-size: 16px;
   }
+
+  
+  .custom-btn1, .custom-btn2, .sign {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  
   .box img {
     width: 100%;
     height: auto;
   }
-  .top-nav .menu {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
 }
 
+
 @media (max-width: 600px) {
+
   .main-content h1 {
     font-size: 1.4em;
   }
   .main-content p {
     font-size: 14px;
   }
-  .logo {
-    width: 100px;
+
+  
+  .center-form, .form {
+    padding: 20px;
   }
-  .sign {
-    width: 100%;
+  .form {
+    max-width: 90%;
+  }
+
+  
+  .row, .row1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  .top-nav .menu {
+    justify-content: center;
   }
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
+
+.stay, .video-banner, .main-content,
+.center-form, .form {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
 

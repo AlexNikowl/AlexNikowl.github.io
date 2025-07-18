@@ -629,3 +629,47 @@ body {
   padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+  }
+
+  .logo {
+    width: 150px;
+    margin-bottom: 10px;
+    position: static;
+    left: auto;
+    top: auto;
+  }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .login-btn,
+  .register-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .hero {
+    padding-top: 20px;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+}

@@ -17,25 +17,28 @@ body {
 }
 
 /* 3. Hero Section */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;          /* Full viewport */
-  background: #fff;           /* Or add a background-image here */
-  overflow: hidden;
-}
+
 
 /* 4. Navbar */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0;
   width: 100%;
+  height: auto;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
   background: rgba(255,255,255,0.8);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;          /* Full viewport */
+  background: #fff;           /* Or add a background-image here */
+  overflow: hidden;
 }
 
 .logo {
@@ -118,17 +121,16 @@ body {
   z-index: 5;
 }
 
-.side-bar .menu {
-  width: 25px;
-  cursor: pointer;
+.menu {
+  margin:0;
 }
 
-.side-bar .social-links,
-.side-bar .useful-links {
+.social-links,
+.useful-links {
+  position: static;
+  transform: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .side-bar img {
@@ -182,8 +184,8 @@ body {
 @media (max-width: 768px) {
   /* Navbar stacks */
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 1rem;
   }
 

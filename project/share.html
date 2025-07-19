@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Share This Store | Saja Babies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #f00000 50%, #ffffff 50%);
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: #000;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+
+    .container {
+      z-index: 1;
+      background: rgba(255,255,255,0.95);
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 20px;
+      color: #222;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .share-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to bottom, #ffcc00, #ffaa00);
+      border: 3px solid #000;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px #000;
+      transition: all 0.2s ease;
+    }
+
+    .share-button:hover {
+      background: #ffc107;
+      transform: translateY(2px);
+      box-shadow: 0 3px #000;
+    }
+
+    .store-link {
+      margin-top: 20px;
+      font-size: 14px;
+      background: #f8f8f8;
+      border: 1px dashed #aaa;
+      padding: 12px;
+      border-radius: 8px;
+      display: inline-block;
+      word-break: break-word;
+      color: #333;
+    }
+
+    .pokeball-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+      .disclaimer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #444;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  border-top: 2px solid #ccc;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 20px;
+}
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SHARE THE STORE</h1>
+    <p>Let your fellow trainers know where to gear up for their next Pokémon journey!</p>
+    <a href="https:SajaBabies.com" class="share-button" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Poké_Ball_icon.svg" class="pokeball-icon" alt="Pokeball">
+      Share Now
+    </a>
+    <div class="store-link">https://sajababies.com/</div>
+    <div class="disclaimer">
+  ⚠️ All assets and information are owned by ©2025 Niantic, Inc. and ©2025 Pokémon.<br>
+  This project is for academic purposes only and not affiliated with Niantic or The Pokémon Company.
+</div>
+
+  </div>
+  
+</body>
+</html>

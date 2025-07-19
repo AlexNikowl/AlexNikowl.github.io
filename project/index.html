@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Saja Babies Webstore</title>
+  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="hero">
+    <div class="navbar">
+<a href="index.html">
+  <img src="images/logo.PNG" class="logo" alt="Saja Babies Logo">
+</a>
+
+<div class="auth-buttons">
+  <div class="fixed-button-group">
+  <a href="Login Form/login.html">
+    <button type="button" class="fixed-btn login-fixed">Sign in</button>
+  </a>  
+  <a href="Registration Form/register.html">
+    <button type="button" class="fixed-btn register-fixed">Register</button>
+  </a>
+</div>
+
+  </div>
+  
+
+
+
+
+        <div class="content">
+<small>The Official</small>
+<h1 class="pokemon-heading">Web Store <br>for Pokémon GO</h1>
+<p class="inline-disclaimer">
+  ⚠️ This is a student project. All assets ©2025 Niantic & Pokémon. Not affiliated with them.
+</p>
+
+         </div>
+         </div>
+         
+         
+         <div class="side-bar">
+          <img src="images/menu.png" class="menu">
+          <div id="dropdown-menu" class="dropdown-menu">
+  <a href="product/product service.html">Product/Service Page</a>
+  <a href="info.html">About Page</a>
+
+         
+          </div>
+
+
+
+<div class="social-links">
+  <img src="images/fb.png">
+  <img src="images/ig.png">
+  <img src="images/tw.png">
+</div>
+
+
+
+<div class="useful-links">
+  <a href="info.html" title="Info Page">
+    <img src="images/info.png" alt="Info">
+  </a>
+  <a href="share.html" title="Share Page">
+    <img src="images/share.png" alt="Share">
+  </a>
+</div>
+
+
+    </div>
+
+    <div class="bubbles">
+  <img src="images/bubble.png">
+  <img src="images/bubble.png">
+  <img src="images/bubble.png">
+  <img src="images/bubble.png">
+  <img src="images/bubble.png">
+  <img src="images/bubble.png">
+  <img src="images/bubble.png">
+</div>
+
+<div id="cookie-popup" class="cookie-popup">
+  <p>This website uses cookies to enhance your browsing experience.</p>
+  <button id="accept-cookie">Accept</button>
+</div>
+
+
+<div id="promo-tab" class="promo-tab">
+  <button id="close-promo" class="close-promo" aria-label="Close Promo Tab">&times;</button>
+  <a href="product/product service.html" class="promo-link">Get up to 10% OFF your first purchase!</a>
+</div>
+
+
+
+
+  <script>
+  const menuIcon = document.querySelector('.menu');
+  const dropdown = document.getElementById('dropdown-menu');
+
+  menuIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('show');
+  });
+
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('show');
+  });
+
+
+  //PARA SA COOKIES POPUP
+  const cookiePopup = document.getElementById('cookie-popup');
+  const acceptCookieBtn = document.getElementById('accept-cookie');
+
+  
+  if (!localStorage.getItem('cookieAccepted')) {
+    cookiePopup.style.display = 'flex';
+  }
+
+  acceptCookieBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieAccepted', 'true');
+    cookiePopup.style.display = 'none';
+  });
+
+
+  //PARA SA DISCOUNT TO
+      document.addEventListener('DOMContentLoaded', function () {
+    const promoTab = document.getElementById('promo-tab');
+    const closeBtn = document.getElementById('close-promo');
+
+    
+    if (!sessionStorage.getItem('promoDismissed')) {
+      setTimeout(() => {
+        promoTab.classList.add('show');
+      }, 3000);
+    }
+
+   
+    closeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      promoTab.classList.remove('show');
+      sessionStorage.setItem('promoDismissed', 'true');
+    });
+  });
+
+
+</script>
+
+
+  </body>
+  </html>
+

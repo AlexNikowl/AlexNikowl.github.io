@@ -1,26 +1,34 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom, #f00000 50%, #ffffff 50%);
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
+
 body::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 78%;
   left: 0;
   width: 100%;
-  height: 10px;
-  background: #000;
+  height: 30px;
+  background: #000000;
   transform: translateY(-50%);
-  z-index: 0;
+  z-index: -1;
 }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
 .login-container {
   background: #fff;
   padding: 40px;
@@ -29,36 +37,13 @@ body::before {
   text-align: center;
   max-width: 400px;
   width: 90%;
-  z-index: 1;
-  position: relative;
+  margin-bottom: 40px;
 }
-
-
-
-
-.login-container {
-  background: #fff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
-
-}
-
-
-.pokemon-logo {
-  width: 160px;
-  margin-bottom: 20px;
-}
-
 
 .login-container h2 {
   font-weight: 600;
   margin-bottom: 25px;
 }
-
 
 .login-btn {
   display: flex;
@@ -79,38 +64,18 @@ body::before {
 .login-btn img {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
-  vertical-align: middle;
 }
-
 
 .login-btn:hover {
   opacity: 0.9;
   transform: translateY(-1px);
 }
 
-.apple {
-  background: #000;
-  color: #fff;
-}
-.facebook {
-  background: #1877F2;
-  color: #fff;
-}
-.google {
-  background: #fff;
-  border: 1px solid #ddd;
-  color: #333;
-}
-.niantic-kids {
-  background: #FF5631;
-  color: #fff;
-}
-.trainer-club {
-  background: #34A853;
-  color: #fff;
-}
-
+.apple { background: #000; color: #fff; }
+.facebook { background: #1877F2; color: #fff; }
+.google { background: #fff; border: 1px solid #ddd; color: #333; }
+.niantic-kids { background: #FF5631; color: #fff; }
+.trainer-club { background: #34A853; color: #fff; }
 
 .download-banner {
   margin-top: 30px;
@@ -137,12 +102,33 @@ body::before {
 
 .store-badges img {
   width: 110px;
-  height: auto;
-  transition: transform 0.2s ease;
   border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
 .store-badges img:hover {
   transform: scale(1.05);
 }
 
+.pokemon-disclaimer {
+  max-width: 400px;
+  margin-top: 40px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #fdfdfd;
+  border: 4px solid #000;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 4px 4px 0 #000;
+  color: #333;
+  text-align: center;
+}
+
+.dialog-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.dialog-text {
+  font-size: 0.6rem;
+  line-height: 1.4;
+}
